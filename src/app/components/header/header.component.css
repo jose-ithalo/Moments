@@ -1,0 +1,43 @@
+#addLink a {
+    color: #dec129;
+
+    &:hover {
+        background-color: #efefef;
+    }
+}
+
+.brand,
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand img {
+    margin-right: 0.6em;
+    width: 40px;
+}
+
+.brand h2 {
+    transition: 0.4s;
+
+    &:hover {
+        color: #dec129;
+    }
+}
+
+.links a {
+    padding: 5px;
+}
+
+.links li {
+    list-style: none;
+    margin-right: 1em;
+}
+
+nav {
+    border-bottom: 1px solid #777;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
