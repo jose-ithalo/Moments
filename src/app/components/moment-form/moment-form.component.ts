@@ -18,18 +18,18 @@ export class MomentFormComponent implements OnInit {
   ngOnInit(): void {
     this.momentForm = new FormGroup({
       id: new FormControl(''),
-      titleForm: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      descForm: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      title: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      description: new FormControl('', [Validators.required, Validators.minLength(5)]),
       image: new FormControl('')
     });
   }
 
   get title() {
-    return this.momentForm.get('titleForm')!;
+    return this.momentForm.get('title')!;
   }
 
   get desc() {
-    return this.momentForm.get('descForm')!;
+    return this.momentForm.get('description')!;
   }
 
   onFileSelected(event: any) {
@@ -43,8 +43,6 @@ export class MomentFormComponent implements OnInit {
     if (this.momentForm.invalid) {
       return
     }
-
-    console.log(this.momentForm.value);
 
     this.onSubmit.emit(this.momentForm.value);
 
