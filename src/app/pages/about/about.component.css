@@ -1,0 +1,17 @@
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    padding: 2em;
+}
+
+a {
+    text-decoration: underline;
+}
+
+span {
+    font-weight: bold;
+    color: #edc129;
+}
