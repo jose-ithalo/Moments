@@ -17,6 +17,9 @@ export class HomeComponent implements OnInit {
   chosenMoments: Moment[] = [];
   baseUrl = environment.baseApiUrl;
 
+  iconSearch = faSearch;
+  searchTerm: string = '';
+
   constructor(private momentService: MomentsService) { }
 
   ngOnInit(): void {
@@ -32,4 +35,13 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  search(evt: Event): void {
+    const target = evt.target as HTMLInputElement;
+    const value = target.value;
+
+    this.chosenMoments = this.allMoments.filter((moment) => {
+      return moment.title.toLowerCase().includes(value.toLowerCase());
+    });
+
+  }
 }
