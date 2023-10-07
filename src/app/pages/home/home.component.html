@@ -2,7 +2,7 @@
     <h1>Veja o que estão compartilhando</h1>
     <div *ngIf="allMoments.length > 0; else noMoments">
         <div class="moments-container">
-            <div class="momentData" *ngFor="let moment of allMoments">
+            <div class="moment-data" *ngFor="let moment of allMoments">
                 <img src="{{baseUrl}}uploads/{{moment.image}}" alt="{{moment.title}}">
                 <h3>{{moment.title}}</h3>
                 <p class="data">{{moment.created_at}}</p>
