@@ -11,7 +11,7 @@
             <fa-icon [icon]="iconEdit"></fa-icon>
             Editar
         </a>
-        <button class="remove-btn">
+        <button class="remove-btn" (click)="removeHandler(moment.id)">
             <fa-icon [icon]="iconDelete"></fa-icon>
             Excluir
         </button>
