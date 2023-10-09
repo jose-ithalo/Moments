@@ -20,6 +20,45 @@ button {
     cursor: pointer;
 }
 
+button fa-icon,
+a fa-icon {
+    margin-right: 0.2em;
+}
+
+.edit-btn,
+.remove-btn {
+    background-color: #fff;
+    border: 1px solid #efefef;
+    font-size: 1em;
+    margin: 0 0.5em;
+    padding: 0.4em 1em;
+    transition: 0.4s;
+}
+
+.edit-btn,
+.edit-btn path {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.edit-btn:hover,
+.edit-btn:hover path {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.remove-btn,
+.remove-btn path {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.remove-btn:hover,
+.remove-btn:hover path {
+    background-color: #dc3545;
+    color: #fff;
+}
+
 form {
     margin: 0 auto;
     width: 450px;
