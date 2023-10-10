@@ -12,14 +12,20 @@ export class MomentFormComponent implements OnInit {
 
   @Input() btnText!: string
   @Output() onSubmit = new EventEmitter<Moment>();
+  @Input() momentData: Moment | null = null;
 
   momentForm!: FormGroup;
 
   ngOnInit(): void {
     this.momentForm = new FormGroup({
       id: new FormControl(''),
-      title: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      description: new FormControl('', [Validators.required, Validators.minLength(5)]),
+
+      title: new FormControl(this.momentData ? this.momentData.title : '',
+        [Validators.required, Validators.minLength(3)]),
+
+      description: new FormControl(this.momentData ? this.momentData.description : '',
+        [Validators.required, Validators.minLength(5)]),
+
       image: new FormControl('')
     });
   }
