@@ -20,7 +20,7 @@ export class NewMomentComponent {
     private router: Router
   ) { }
 
-  async createHandler(moment: Moment) {
+  createHandler(moment: Moment) {
     console.log(moment);
 
     const formData = new FormData();
@@ -32,11 +32,14 @@ export class NewMomentComponent {
       formData.append('image', moment.image);
     }
 
-    this.momentService.createMoment(formData).subscribe();
+    this.momentService.createMoment(formData).subscribe({
+      next: () => {
+        this.messageService.add('Momento adicionado com sucesso!');
+        this.router.navigate(['/']);
+      }
+    });
 
-    this.messageService.add('Momento adicionado com sucesso!');
 
-    this.router.navigate(['/']);
 
   }
 
