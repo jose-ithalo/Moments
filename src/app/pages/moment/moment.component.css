@@ -25,9 +25,34 @@
     background-color: #eee;
 }
 
+.author {
+    font-size: 0.8em;
+}
+
+.comment-container {
+    border-bottom: 1px solid #efefef;
+    padding: 1em 0;
+    text-align: left;
+}
+
+.comment {
+    font-size: 0.9em;
+}
+
+.comment-form {
+    margin-bottom: 3em;
+    margin-top: 3em;
+}
+
+.comment-form form {
+    max-width: 300px;
+    text-align: center;
+}
+
 .comments {
     margin-bottom: 1em;
     padding: 1.5em 0;
+    width: 100%;
 }
 
 .moment h1 {
@@ -37,4 +62,8 @@
 img {
     margin: 0 auto 1em;
     max-width: 500px;
+}
+
+label {
+    text-align: left;
 }
