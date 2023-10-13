@@ -67,3 +67,7 @@ img {
 label {
     text-align: left;
 }
+
+.validation-error {
+    align-self: self-start;
+}
