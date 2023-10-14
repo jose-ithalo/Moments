@@ -6,6 +6,9 @@
             <input type="text" placeholder="Ou busque por um momento..." (input)="search($event)">
         </form>
     </div>
+
+    <mat-spinner *ngIf="status" class="loading" color="warn"></mat-spinner>
+
     <div *ngIf="allMoments.length > 0; else noMoments">
         <div class="moments-container">
             <div class="moment-data" *ngFor="let moment of chosenMoments">
@@ -18,6 +21,6 @@
         </div>
     </div>
     <ng-template #noMoments>
-        <h1>Não há momentos cadastrados</h1>
+        <h1 *ngIf="!status">Não há momentos cadastrados</h1>
     </ng-template>
 </div>
