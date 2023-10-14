@@ -11,8 +11,7 @@
     <td><img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" /></td>
     <td><img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" /></td>
     <td><img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/adonisjs/adonisjs-original.svg" alt="Adonis" /></td>
-    <td><img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" /></td>
-    
+    <td><img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" /></td>  
   </tr>
   
   <tr>
@@ -20,14 +19,13 @@
     <td>TypeScript</td>
     <td>Adonis.js</td>
     <td>SQLite3</td>
-
   </tr> 
+  
   <tr>
     <td>v16.2.0</td>
     <td>v5.1.3</td>
     <td>v1.0.0</td>
     <td>v5.0.2</td>
-
   </tr>
 </table>
 
