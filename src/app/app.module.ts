@@ -15,6 +15,7 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MomentComponent } from './pages/moment/moment.component';
 import { EditMomentComponent } from './pages/edit-moment/edit-moment.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { EditMomentComponent } from './pages/edit-moment/edit-moment.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
