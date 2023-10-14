@@ -4,7 +4,7 @@ import { MomentsService } from 'src/app/services/moments.service';
 import Moment from 'src/app/interfaces/Moments';
 import { environment } from 'src/environments/environment';
 
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faL, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -17,12 +17,18 @@ export class HomeComponent implements OnInit {
   chosenMoments: Moment[] = [];
   baseUrl = environment.baseApiUrl;
 
+  status: boolean = true;
+
   iconSearch = faSearch;
-  searchTerm: string = '';
 
   constructor(private momentService: MomentsService) { }
 
   ngOnInit(): void {
+
+    setTimeout(() => {
+      this.status = false;
+    }, 4000);
+
     this.momentService.getMoments().subscribe((items) => {
       const data: Moment[] = items.data;
 
@@ -32,6 +38,8 @@ export class HomeComponent implements OnInit {
 
       this.allMoments = data;
       this.chosenMoments = data;
+
+      this.status = false;
     });
   }
 
