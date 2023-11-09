@@ -1,27 +1,34 @@
-# ProjectMoments
+# Moments <img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" />
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+> O intuito desse projeto é o de possibilitar o usuário visualizar e compartilhar seus melhores momentos, armazenando a imagem, título, descrição, entre outras informações.  
 
-## Development server
+> O framework utilizado nesse projeto foi o Angular, que possui diversos serviços internos como o sistema de rotas e o de requisições HTTP, juntamente com TypeScript e uma API construida em Adonis.js para CRUD de registros.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tecnologias
 
-## Code scaffolding
+<table>
+  <tr align="center">
+    <td><img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular" /></td>
+    <td><img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" /></td>
+    <td><img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/adonisjs/adonisjs-original.svg" alt="Adonis" /></td>
+    <td><img height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" /></td>  
+  </tr>
+  
+  <tr>
+    <td>Angular</td>
+    <td>TypeScript</td>
+    <td>Adonis.js</td>
+    <td>SQLite3</td>
+  </tr> 
+  
+  <tr>
+    <td>v16.2.0</td>
+    <td>v5.1.3</td>
+    <td>v1.0.0</td>
+    <td>v5.0.2</td>
+  </tr>
+</table>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Como rodar a aplicação
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Execute o comando `ng serve` para rodar a aplicação. Navegue para `http://localhost:4200/`. A aplicação será recarregada automaticamente ao realizar mudanças no código fonte.
