@@ -4,7 +4,7 @@ import { MomentsService } from 'src/app/services/moments.service';
 import Moment from 'src/app/interfaces/Moments';
 import { environment } from 'src/environments/environment';
 
-import { faL, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
 
     setTimeout(() => {
       this.status = false;
-    }, 4000);
+    }, 5000);
 
     this.momentService.getMoments().subscribe((items) => {
       const data: Moment[] = items.data;
