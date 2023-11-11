@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
 
     setTimeout(() => {
       this.status = false;
-    }, 5000);
+    }, 7000);
 
     this.momentService.getMoments().subscribe((items) => {
       const data: Moment[] = items.data;
