@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormGroup, FormControl, FormGroupDirective, Validators } from '@angular/forms';
 
 import { faTimes, faEdit } from '@fortawesome/free-solid-svg-icons';
 
@@ -23,7 +22,8 @@ export class MomentComponent implements OnInit {
   iconEdit = faEdit;
   iconDelete = faTimes;
 
-  commentForm!: FormGroup;
+  inputText: string | null = null;
+  inputName: string | null = null;
 
   constructor(
     private momentService: MomentsService,
@@ -37,19 +37,6 @@ export class MomentComponent implements OnInit {
     const id: number = Number(this.route.snapshot.paramMap.get('id'));
 
     this.momentService.getOneMoment(id).subscribe((item) => (this.moment = item.data));
-
-    this.commentForm = new FormGroup({
-      text: new FormControl('', [Validators.required]),
-      username: new FormControl('', [Validators.required])
-    });
-  }
-
-  get text() {
-    return this.commentForm.get('text')!;
-  }
-
-  get username() {
-    return this.commentForm.get('username')!;
   }
 
   removeHandler(id: number): void {
@@ -62,15 +49,21 @@ export class MomentComponent implements OnInit {
 
   }
 
-  onSubmit(formDirective: FormGroupDirective) {
+  onSubmit() {
 
-    if (this.commentForm.invalid) {
-      return;
+    if (this.inputText === null || this.inputName === null) {
+      this.inputText = '';
+      this.inputName = '';
+      return
     }
 
-    const data: Comment = this.commentForm.value;
+    const momentId: number = Number(this.moment!.id);
 
-    data.momentId = Number(this.moment!.id);
+    const data: Comment = {
+      text: this.inputText,
+      username: this.inputName,
+      momentId: momentId
+    }
 
     this.commentService.createComment(data).subscribe((comment) => {
       this.moment!.comments!.push(comment.data);
@@ -78,9 +71,7 @@ export class MomentComponent implements OnInit {
 
     this.messsagesService.add('Comentário adicionado');
 
-    this.commentForm.reset();
-
-    formDirective.reset();
-
+    this.inputText = null;
+    this.inputName = null;
   }
 }
