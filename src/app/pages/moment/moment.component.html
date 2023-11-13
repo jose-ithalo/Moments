@@ -30,23 +30,25 @@
         </ng-template>
         <div class="comment-form">
             <h3>Deixe um comentário:</h3>
-            <form #formDir="ngForm" (ngSubmit)="onSubmit(formDir)" [formGroup]="commentForm">
+            <form (ngSubmit)="onSubmit()">
                 <div class="form-group">
                     <label for="text">Comentário</label>
-                    <textarea placeholder="O que você quer comentar?" id="text" required formControlName="text">
+                    <textarea placeholder="O que você quer comentar?" id="text" required [(ngModel)]="inputText"
+                        name="inputText">
                     </textarea>
 
-                    <div *ngIf="text.invalid && formDir.submitted" class="validation-error">
-                        <p *ngIf="text.errors?.['required']">Por favor, descreva algo</p>
+                    <div *ngIf="inputText === ''" class="validation-error">
+                        <p>Por favor, descreva algo</p>
                     </div>
                 </div>
+
                 <div class="form-group">
                     <label for="username">Nome:</label>
-                    <input type="text" placeholder="Indentifique-se:" id="username" required
-                        formControlName="username" />
+                    <input type="text" placeholder="Indentifique-se:" id="username" required [(ngModel)]="inputName"
+                        name="inputName" />
 
-                    <div *ngIf="username.invalid && formDir.submitted" class="validation-error">
-                        <p *ngIf="username.errors?.['required']">Seu nome é obrigatório</p>
+                    <div *ngIf="inputName === ''" class="validation-error">
+                        <p>Seu nome é obrigatório</p>
                     </div>
                 </div>
                 <input type="submit" value="Comentar!">
